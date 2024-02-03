@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration and Login</title>
+    <link rel="stylesheet" href="./stylesRegis.css">
+</head>
+<body>
+    <div id="registrationForm">
+        <h1>Registration</h1>
+
+        <form action="/auth/register" method="post">
+            <label for="regUsername">Username:</label>
+            <input type="text" id="regUsername" name="username" required>
+
+            <label for="regPassword">Password:</label>
+            <input type="password" id="regPassword" name="password" required>
+
+            <button type="submit">Register</button>
+        </form>
+        
+        <p>Already have an account? <a href="javascript:void(0);" onclick="toggleForm('loginForm')">Login here</a></p>
+    </div>
+
+    <div id="loginForm" style="display:none;">
+        <h1>Login</h1>
+
+        <form action="/auth/login" method="post">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" name="username" required>
+
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account? <a href="javascript:void(0);" onclick="toggleForm('registrationForm')">Register here</a></p>
+    </div>
+
+    <script>
+        function toggleForm(formId) {
+            document.getElementById('registrationForm').style.display = (formId === 'registrationForm') ? 'block' : 'none';
+            document.getElementById('loginForm').style.display = (formId === 'loginForm') ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

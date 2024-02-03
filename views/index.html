@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DashBoard</h1>
+    <h3>Welcome!</h3>
+
+    
+    
+
+    <div>
+        <ol>
+            <li><a href="">Project1</a></li>
+            <li><a href="">Project2</a></li>
+            <li><a href="">Project3</a></li>
+        </ol>
+    </div>
+    
+    <button id = 'lo' >logout</button>
+    <script>
+        function logout(){
+            const newRoute = "/logout";
+            window.location.href = newRoute;
+
+        }
+        document.getElementById('lo').addEventListener('click', logout)
+    </script>
+   
+</body>
+</html>
